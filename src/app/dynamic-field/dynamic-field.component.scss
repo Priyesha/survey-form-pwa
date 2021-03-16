@@ -1,0 +1,21 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+  }
+  .checkbox {
+    text-align: left;
+  }
+  .errorMessage {
+    color: red;
+    font-size: smaller;
+    text-align: left;
+  }
+  .required:after {
+    content:" *";
+    color: red;
+  }
+

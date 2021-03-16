@@ -1,0 +1,25 @@
+<div [formGroup]="form">
+    <div class="example-form">
+        <label [ngClass]="{'required' : field.required}">{{field.field}}</label>
+
+        <div>
+            <div [ngSwitch]="field.type">
+                <input *ngSwitchCase="'text'" [formControlName]="field.key" type="field.type">
+
+                <textarea *ngSwitchCase="'textarea'" [formControlName]="field.key"></textarea>
+
+                <div *ngSwitchCase="'checkbox'">
+                    <section class="checkbox" *ngFor="let option of field.options" [formArrayName]="field.key">
+                        <mat-checkbox (change)="onChange($event)" [value]="option">{{option}}</mat-checkbox>
+                    </section>
+                </div>
+            </div>
+            <div *ngIf="submitted && f.errors">
+                <div class="errorMessage" *ngIf="f.errors.required">{{field.field}} is required</div>
+                <div class="errorMessage" *ngIf="f.errors.maxlength">{{field.field}} can have {{field.length}}
+                    characters
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

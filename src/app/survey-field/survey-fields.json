@@ -1,0 +1,40 @@
+[
+    {
+        "stepName": "Step 1",
+        "controls": [
+            {
+                "key": "firstName",
+                "field": "First Name",
+                "type": "text",
+                "required": true,
+                "length": 30
+            },
+            {
+                "key": "lastName",
+                "field": "Last Name",
+                "type": "text",
+                "required": true,
+                "length": 30
+            },
+            {
+                "key": "address",
+                "field": "Address",
+                "type": "textarea",
+                "required": true,
+                "length": 300
+            }
+        ]
+    },
+    {
+        "stepName": "Step 2",
+        "controls": [
+            {
+                    "key": "interestIn",
+                    "field": "Interested In?",
+                    "type": "checkbox",
+                    "required": true,
+                    "options": ["Books", "TV", "Video games"]
+            }
+        ]            
+    }
+]
